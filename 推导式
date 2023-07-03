@@ -38,10 +38,18 @@ for i in data.sqlit("&")
 
 data_dict = {i.sqlit("=")[0]: i.sqlit("=")[1] for i in data.sqlit("&")}
 
-将text内容进行反转排序
+将text内容进行 键 值 反转
+text = {'pglt': '41', 'q': 'xx', 'cvid': '06bdbc65f6484844aa21da3342e11669', 'aqs': 'edge..69i57j0l8.1039j0j1', 'FORM': 'ANNTA1', 'PC': 'U531'}
+data_key = text.keys()
+data_new_dict = {data_dict[i]: i for i in data_key}
+   {'41': 'pglt', 'xx': 'q', '06bdbc65f6484844aa21da3342e11669': 'cvid', 'edge..69i57j0l8.1039j0j1': 'aqs', 'ANNTA1': 'FORM', 'U531': 'PC'}
+
+将text内容还原回字符串data
+data = "pglt=41&q=xx&cvid=06bdbc65f6484844aa21da3342e11669&aqs=edge..69i57j0l8.1039j0j1&FORM=ANNTA1&PC=U531"
 text = {'pglt': '41', 'q': 'xx', 'cvid': '06bdbc65f6484844aa21da3342e11669', 'aqs': 'edge..69i57j0l8.1039j0j1', 'FORM': 'ANNTA1', 'PC': 'U531'}
 
+list1 = ["{}={}".format(i, j) for i,j in text.items()]
 
-
-
+str1 = "&".join(list1)
+print(str1)
 
