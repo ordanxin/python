@@ -1,0 +1,47 @@
+推导式灵活变动
+集合列表，可添加的数据容器即可使用推导式
+
+# 列表推导式
+
+list = [i for i in range(100) ] => list = [1, 2, 3,..., 100]
+
+list = [100 for i in range(100) ] => list = [100, 100, 100,..., 100]
+list = [100+i for i in range(100) ] => list = [101, 102, 103,..., 199]
+
+if 推导表达式
+  
+list = [i for i in range(10) if i >6 ] => list = [7, 8, 9]
+list = [i for i in range(100) if i >6 and i <10 ] => list = [7, 8, 9]
+
+format
+
+list = ["工号-{}".format() for i in i in range(100) ] => list = [工号-0, 工号-1, 工号-2,...工号-99]
+
+列表内的元组
+list = [(1,2) for i in range(100) ] => list = [(1,2), (1,2), (1,2),...(1,2)]
+list = [(i,100+i) for i in range(100) ] => list = [(0,100), (1,101), (2,102),...(99,199)]
+
+# 字典推导式
+data = {i：123 for i in range(10) } => data = {0：123, 1：123, 2：123,...9：123}
+
+小练习
+data = "pglt=41&q=xx&cvid=06bdbc65f6484844aa21da3342e11669&aqs=edge..69i57j0l8.1039j0j1&FORM=ANNTA1&PC=U531"
+
+
+将字符串转换为字典
+
+
+data_dict = {}
+
+for i in data.sqlit("&")
+  data_dict[i.split("=")[0]] = i.split("=")[1]
+
+data_dict = {i.sqlit("=")[0]: i.sqlit("=")[1] for i in data.sqlit("&")}
+
+将text内容进行反转排序
+text = {'pglt': '41', 'q': 'xx', 'cvid': '06bdbc65f6484844aa21da3342e11669', 'aqs': 'edge..69i57j0l8.1039j0j1', 'FORM': 'ANNTA1', 'PC': 'U531'}
+
+
+
+
+
