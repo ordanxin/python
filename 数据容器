@@ -1,0 +1,2 @@
+lisy 转 str
+str1 = "任意字符".join(想转换成str的列表)
