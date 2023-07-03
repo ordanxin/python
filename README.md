@@ -1,2 +1,2 @@
-# python-OOP
+# python
 面向对象编程
